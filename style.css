@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'PlaywriteIN';
+    src: url('PlaywriteIN-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    background-image: url('https://img.freepik.com/premium-photo/rose-gold-seamless-floral-pattern-background_776894-89725.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: 'PlaywriteIN', Arial, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav a:hover {
+    color: #AA336A;
+}
+
+.topnav a.active {
+    background-color: transparent;
+}
+
+.name-container {
+    display: flex;
+    gap: 10px;
+}
+
+.letter {
+    font-size: 48px;
+    color: #333;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+}
+
+.letter.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.logo {
+    border-radius: 500px;
+}
+
+.slideshow-container {
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    width: 100%;
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 80vh;
+    object-fit: contain;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.slide-description {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.slide-description p {
+    margin: 5px 0;
+}
